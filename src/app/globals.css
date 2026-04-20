@@ -1,0 +1,24 @@
+
+
+
+@import "tailwindcss";
+/* 1. الحاوية الرئيسية للسكرول */
+
+::-webkit-scrollbar {
+  width: 3px; /* عرض نحيف جداً */
+  
+}
+
+/* 2. الجزء المتحرك (المقبض) */
+::-webkit-scrollbar-thumb {
+  background-color:#d40101; /* لون رمادي فاتح */
+  border-radius: 10px; /* حواف دائرية */
+}
+
+
+
+/* 4. إخفاء الأسهم نهائياً */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
