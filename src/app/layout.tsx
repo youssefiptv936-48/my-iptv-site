@@ -1,8 +1,22 @@
 import "./globals.css";
-import Footer from "./components/Footer";
+import { Tajawal } from 'next/font/google'; // استدعاء الخط بشكل ذكي
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
+// إعداد الخط ليكون سريعاً جداً ولا يحجب الصفحة
+const tajawal = Tajawal({ 
+  subsets: ['arabic'],
+  weight: ['400', '500', '700'],
+  display: 'swap', 
+});
 
+// الطريقة الاحترافية لتعريف معلومات الموقع في Next.js
+export const metadata = {
+  title: 'باقات اشتراك IPTV المتميزة | قنوات مباشرة وأفلام',
+  description: 'اشترك الآن في أفضل خدمة IPTV. أكثر من 46 ألف قناة و150 ألف فيلم بجودة عالية وبدون تقطيع.',
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+};
 
 export default function RootLayout({
   children,
@@ -11,26 +25,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
-      <head>
-        {/* تحسين 1: إزالة الربط باللوكال هوست لأنه يسبب بطء في الاختبارات الحقيقية */}
-        {/* تحسين 2: استدعاء الأيقونات والخطوط بشكل Preload إذا كانت خارجية */}
-
-        <title>باقات اشتراك IPTV المتميزة | قنوات مباشرة وأفلام</title>
-        <meta
-          name="description"
-          content="اشترك الآن في أفضل خدمة IPTV. أكثر من 46 ألف قناة و150 ألف فيلم بجودة عالية وبدون تقطيع."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
- 
-      </head>
-      <body className="bg-black antialiased overflow-x-hidden">
-        <header>
-          <Navbar/>
-        </header>
-        {/* تحسين 3: استخدام contain-intrinsic-size لمنع الـ CLS */}
-        <main className="min-h-screen">{children}</main>
-        
+      {/* ملاحظة: Next.js سيتعامل مع الـ Head تلقائياً من كائن metadata أعلاه */}
+      <body className={`${tajawal.className} bg-black antialiased overflow-x-hidden`}>
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
