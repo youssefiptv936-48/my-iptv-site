@@ -3,7 +3,7 @@
 
 @import "tailwindcss";
 /* 1. الحاوية الرئيسية للسكرول */
-
+  
 ::-webkit-scrollbar {
   width: 3px; /* عرض نحيف جداً */
   

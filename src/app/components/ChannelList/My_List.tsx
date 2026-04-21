@@ -28,7 +28,7 @@ export default function My_List() {
 
   return (
     
-      <div className=" w-auto  flex items-center flex-col">
+      <div className="  relative w-auto  box-border flex items-center flex-col">
         
         <section className="mb-3  text-center md:w-2xl">
           <H2 >إكتشف عالماً مليء بالإثارة!</H2>
@@ -40,7 +40,7 @@ export default function My_List() {
         {/* أزرار التبديل الرئيسية - تحسين الـ Accessibility والأداء */}
         <section 
         
-          className="bg-neutral-800 min-w-96 md:w-3xl   flex items-center justify-center rounded-xl p-1 mb-3 "
+          className="bg-neutral-800 w-[90%] md:w-3xl   flex items-center justify-between rounded-xl p-1 mb-3 "
         >
           {["بث مباشر", "أفلام", "مسلسلات"].map((label, index) => (
             <button
@@ -60,7 +60,7 @@ export default function My_List() {
         </section>
         
         {/* منطقة المحتوى - إضافة min-h لتقليل الـ Layout Shift */}
-        <div className=" w-full p-2  md:w-3xl ">
+        <div className="   flex items-center  md:w-3xl ">
           
           {openIndex === 0 && <LiveBroadcast activeSub={activeSub} setActiveSub={setActiveSub} />}
           {openIndex === 1 && <Movies activeSub={activeSub} setActiveSub={setActiveSub} />}

@@ -7,12 +7,12 @@ import ButtonRed from "../HtmlTools/ButtonRed";
 
 export default function Free() {
   return (
-    <div className="    flex flex-col  p-6 ">
-      <div className=" px-10 font-black text-4xl ">
+    <div className="    flex flex-col p-3   ">
+    
         <H1 >
             تجربة IPTV مجانية بجودة عالية جرّب اشتراك IPTV مجانًا قبل الشراء
       </H1>
-      </div>
+    
       
       <H2>
          نوفر لك تجربة IPTV مجانية لاكتشاف سرعة البث وثبات القنوات وتنوع
@@ -25,7 +25,7 @@ export default function Free() {
 
      
 
-      <ButtonRed href="https://wa.me/212609851199?text=اريد +تجربه +المجانيه +12 +ساعه" LinkText="nn"/>
+      <ButtonRed href="https://wa.me/212609851199?text=اريد +تجربه +المجانيه +12 +ساعه" LinkText="جرب مجانا"/>
     </div>
   );
 }

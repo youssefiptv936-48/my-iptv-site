@@ -46,17 +46,17 @@ export default function LiveBroadcast({ activeSub, setActiveSub }: LiveBroadcast
   };
 
   return (
-    <div className="flex   items-center flex-col min-w-96 h-2xl md:w-3xl mt-3">
+    <div className="flex  w-full  flex-col  h-2xl md:w-3xl mt-3">
       
       {/* أزرار الأقسام - تم حذف الترانزيشن والـ Scale للسرعة */}
-      <nav role="tablist" className="bg-neutral-900 flex flex-wrap w-full justify-around p-1 border-2 border-solid rounded-md  ">
+      <nav role="tablist" className="  flex flex-wrap w-full justify-around p-1 border-2 border-solid rounded-md  ">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             role="tab"
             aria-selected={activeSub === tab.id}
             onClick={() => setActiveSub(tab.id)}
-            className={`px-3 py-1 rounded-md cursor-pointer text-sm font-bold text-slate-200 ${
+            className={`px-3  py-1 rounded-md cursor-pointer text-sm font-bold text-slate-200 ${
               activeSub === tab.id ? "bg-[#ff0031]" : "bg-transparent opacity-70 hover:opacity-100 hover:bg-[#ff0033c2]"
             }`}
           >
@@ -66,7 +66,7 @@ export default function LiveBroadcast({ activeSub, setActiveSub }: LiveBroadcast
       </nav>
 
       {/* محتوى الأقسام الفرعية - تم حذف transition-all duration-500 */}
-      <div className={`mt-3  w-full max-h-96    overflow-hidden ${tabs[activeSub]?.colorClass || ""}`}>
+      <div className={`mt-3  max-h-96     overflow-hidden ${tabs[activeSub]?.colorClass || ""}`}>
         {renderContent()}
       </div>
       

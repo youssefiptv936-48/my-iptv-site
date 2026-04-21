@@ -34,7 +34,7 @@ export default function Navbar() {
      open ? "bg-black" : ""
    }`}
  >
-   <div>Logooo</div>
+   <div className=" font-black text-2xl text-red-500">BestIPTV</div>
 
    {/* زر فتح القائمة */}
    {!open && (
@@ -137,7 +137,7 @@ export default function Navbar() {
           open ? "block" : "hidden"
         }`}
       >
-        <div>
+        <div className="bg-amber-500">
           <Button_black>
             
             <Link onClick={() => setOpen(false)} className="w-full text-start" href="/">
@@ -147,21 +147,21 @@ export default function Navbar() {
 
           <Button_black>
             
-            <Link onClick={() => setOpen(false)} className="w-full text-start" href="Pages/freetrial">
+            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Pages/freetrial">
               تجربه مجانيه
             </Link>
           </Button_black>
 
           <Button_black>
           
-            <Link onClick={() => setOpen(false)} className="w-full text-start" href="Pages/Subscriptions">
+            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Pages/Subscriptions">
               انضم الى عائلتنا
             </Link>
           </Button_black>
 
           <Button_black>
           
-            <Link onClick={() => setOpen(false)} className="w-full text-start" href="Pages/HelpCenter">
+            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Pages/HelpCenter">
               مركز المساعده
             </Link>
           </Button_black>

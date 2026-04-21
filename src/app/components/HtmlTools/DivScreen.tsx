@@ -7,7 +7,7 @@ interface Props {
 
 export default function DivScreen({ children }: Props) {
   return (
-    <div className="  pt-30 p-2   flex flex-col gap-3 items-center justify-center relative  overflow-hidden   text-slate-200  md:px-25 md:h-screen">
+    <div className="   p-2 text-center  flex flex-col gap-3 items-center justify-center relative  overflow-hidden   text-slate-200  md:px-25 md:h-screen">
       {children}
     </div>
   );

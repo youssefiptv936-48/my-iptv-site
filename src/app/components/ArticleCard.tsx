@@ -24,7 +24,7 @@ export default function ArticleCard({ title, paragraph, children, ButtonUrl }: P
       {/* القسم السفلي (النصوص والزر) - أخذ باقي المساحة */}
       <div className="flex-1  p-3 flex flex-col justify-between items-center">
         
-        <div className="mb-4 text-center">
+        <div className="mb-4 p-x-2  text-center">
           <H2>{title}</H2>
           
              <P>{paragraph}</P>

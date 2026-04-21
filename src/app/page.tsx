@@ -211,7 +211,7 @@ export default function Home() {
     paragraph={
       "استمتع بجودة بث فائقة وثبات مطلق على جميع الأجهزة. ابدأ الآن بتجربة IPTV مجانية شاملة لكل المميزات، وتأكد من استقرار الخدمة في أوقات الذروة قبل الالتزام بالاشتراك الكامل."
     }
-    ButtonUrl={<ButtonRed href="Pages/freetrial" LinkText="احصل على تجربتك المجانية"/>}
+    ButtonUrl={<ButtonRed href="Pages/freetrial" LinkText="تجربه مجانيه"/>}
   >
     <TvIcon/>
   </ArticleCard>
@@ -222,7 +222,7 @@ export default function Home() {
     paragraph={
       "نوفر لك أقوى السيرفرات العالمية لاكتشاف سرعة التنقل بين القنوات وتنوع المحتوى الضخم. جرّب الخدمة الآن وتعرف على الفرق في الجودة والأداء بنفسك لتشترك معنا بكل ثقة."
     }
-    ButtonUrl={<ButtonRed href="Pages/freetrial" LinkText="اطلب تجربتك المجانية الآن"/>}
+    ButtonUrl={<ButtonRed href="Pages/freetrial" LinkText="جرب مجانا"/>}
   >
     <FilmoIcon/>
   </ArticleCard>
