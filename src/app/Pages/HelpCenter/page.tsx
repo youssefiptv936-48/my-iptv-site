@@ -53,7 +53,7 @@ export default function HelpCenter() {
           </P>
           <div className="mt-4">
             <button className="w-30 p-2 rounded-r-3xl m-1 text-xl bg-green-500 hover:bg-green-600 transition-colors">
-              <Link href="https://wa.me/0609851199" target="_blank">
+              <Link href="https://wa.me/212609851199?text=اريد+ طلب+ مساعده+ تقنيه." target="_blank">
                 واتساب
               </Link>
             </button>

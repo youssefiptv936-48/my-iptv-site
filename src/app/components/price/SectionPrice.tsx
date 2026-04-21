@@ -28,26 +28,26 @@ export default function SectionPrice() {
           month="شهر واحد"
           eur="9"
           planId="1-month"
-          link="https://wa.me/212609851199?text=أريد+الاشتراك+في+خطة+الشهر+الواحد"
+          link="https://wa.me/212609851199?text=أريد+الاشتراك+الشهر+الواحد"
         />
         <Price
           month="3 أشهر"
           eur="14"
           planId="3-months"
-           link="https://wa.me/212609851199?text=أريد+الاشتراك+في+خطة+الشهر+الواحد"
+           link="https://wa.me/212609851199?text=أريد+الاشتراك+3+أشهر"
         />
         <Price
           month="6 أشهر"
           eur="20"
           planId="6-months"
-           link="https://wa.me/212609851199?text=أريد+الاشتراك+في+خطة+الشهر+الواحد"
+           link="https://wa.me/212609851199?text=أريد+الاشتراك+6+أشهر"
         />
         <Price
           month="12 شهراً"
           eur="34"
           featured={true}
           planId="12-months"
-           link="https://wa.me/212609851199?text=أريد+الاشتراك+في+خطة+الشهر+الواحد"
+           link="https://wa.me/212609851199?text=أريد+الاشتراك+12+أشهر"
         />
       </div>
     </section>

@@ -25,7 +25,7 @@ export default function Free() {
 
      
 
-      <ButtonRed href="" LinkText="nn"/>
+      <ButtonRed href="https://wa.me/212609851199?text=اريد +تجربه +المجانيه +12 +ساعه" LinkText="nn"/>
     </div>
   );
 }
