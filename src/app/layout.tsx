@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       {/* ملاحظة: Next.js سيتعامل مع الـ Head تلقائياً من كائن metadata أعلاه */}
+      
       <body className={`${tajawal.className} bg-black antialiased overflow-x-hidden`}>
         <Navbar />
         <main className="min-h-screen">

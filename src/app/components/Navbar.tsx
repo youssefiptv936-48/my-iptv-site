@@ -137,7 +137,7 @@ export default function Navbar() {
           open ? "block" : "hidden"
         }`}
       >
-        <div className="bg-amber-500">
+        <div >
           <Button_black>
             
             <Link onClick={() => setOpen(false)} className="w-full text-start" href="/">
@@ -170,7 +170,7 @@ export default function Navbar() {
          
             <a
               className="w-full text-start"
-              href="https://chatgpt.com/c/68d6c11f-6964-8330-80c8-f58954f52989"
+             href="https://wa.me/212609851199?text=اريد+ طلب+ مساعده+ تقنيه." 
             >
               WhatsApp
             </a>
