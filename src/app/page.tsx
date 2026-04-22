@@ -56,8 +56,8 @@ export default function Home() {
         </H2>
 
         <FlexBox className=""> 
-            <ButtonRed  href="Pages/freetrial" LinkText="جرّب قبل أن تشترك" />
-          <ButtonRed  href="Pages/Subscriptions" LinkText=" ابدا المشاهده الان" />
+            <ButtonRed  href="/freetrial" LinkText="جرّب قبل أن تشترك" />
+          <ButtonRed  href="/Subscriptions" LinkText=" ابدا المشاهده الان" />
         </FlexBox>
           
         
@@ -87,7 +87,7 @@ export default function Home() {
        
         
       > 
-      <ButtonRed href="Pages/Subscriptions" LinkText="اختر باقتك المناسبة"></ButtonRed>
+      <ButtonRed href="/Subscriptions" LinkText="اختر باقتك المناسبة"></ButtonRed>
       
       </Menu_right>
 
@@ -110,7 +110,7 @@ export default function Home() {
           " كل قناة تعمل بجودات متنوعة لضمان تشغيلها على أي سرعة إنترنت، ليبقى اشتراك IPTV بدون تقطيع مهما كان اتصالك."
         }
         
-        buttonUrl={<ButtonRed href="Pages/Subscriptions" LinkText="اشترك الآن وابدأ المشاهدة"/>}
+        buttonUrl={<ButtonRed href="/Subscriptions" LinkText="اشترك الآن وابدأ المشاهدة"/>}
       >
        
         
@@ -182,7 +182,7 @@ export default function Home() {
         <P >
           كل هذا ضمن أفضل اشتراك IPTV بجودة عالية وبدون تحميل أو انتظار.
         </P>
-        <ButtonRed href="Pages/Subscriptions" LinkText="احصل على الوصول الكامل للمكتبة"/>
+        <ButtonRed href="/Subscriptions" LinkText="احصل على الوصول الكامل للمكتبة"/>
       </Menu_right>
 
       {/* --- القسم الرابع: Menu_left (Free Trial) --- */}
@@ -203,7 +203,7 @@ export default function Home() {
   
   paragraph5={"✓ تفعيل فوري وآمن: بدون قيود، بدون عقود، والأهم.. بدون طلب أي بيانات بطاقة بنكية."}
   
-  buttonUrl={<ButtonRed href="Pages/freetrial" LinkText="اطلب تجربتك بدون التزام الآن"/>}
+  buttonUrl={<ButtonRed href="/freetrial" LinkText="اطلب تجربتك بدون التزام الآن"/>}
 >
   {/* البطاقة الأولى */}
   <ArticleCard
@@ -211,7 +211,7 @@ export default function Home() {
     paragraph={
       "استمتع بجودة بث فائقة وثبات مطلق على جميع الأجهزة. ابدأ الآن بتجربة IPTV مجانية شاملة لكل المميزات، وتأكد من استقرار الخدمة في أوقات الذروة قبل الالتزام بالاشتراك الكامل."
     }
-    ButtonUrl={<ButtonRed href="Pages/freetrial" LinkText="تجربه مجانيه"/>}
+    ButtonUrl={<ButtonRed href="/freetrial" LinkText="تجربه مجانيه"/>}
   >
     <TvIcon/>
   </ArticleCard>
@@ -222,7 +222,7 @@ export default function Home() {
     paragraph={
       "نوفر لك أقوى السيرفرات العالمية لاكتشاف سرعة التنقل بين القنوات وتنوع المحتوى الضخم. جرّب الخدمة الآن وتعرف على الفرق في الجودة والأداء بنفسك لتشترك معنا بكل ثقة."
     }
-    ButtonUrl={<ButtonRed href="Pages/freetrial" LinkText="جرب مجانا"/>}
+    ButtonUrl={<ButtonRed href="/freetrial" LinkText="جرب مجانا"/>}
   >
     <FilmoIcon/>
   </ArticleCard>

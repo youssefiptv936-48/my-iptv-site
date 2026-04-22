@@ -8,7 +8,7 @@ export default function Youssef() {
       
      <span>
   {" "}
-  <Link href={"Pages/Subscriptions"} className="text-red-500">
+  <Link href={"/Subscriptions"} className="text-red-500">
     Youssef
   </Link>
   {" "}

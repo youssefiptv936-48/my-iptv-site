@@ -6,7 +6,7 @@ import Link from "next/link"; // نظام الروابط في Next.js
 
 
 import Button_black from "./Button_black"; 
-import Accordion from "./Accordion"; 
+ 
 import useToggle from "../custom_hooks/useToggle";
 import { MenuIcon } from "./Icons";
 import { CloseIcon } from "./Icons";
@@ -74,33 +74,33 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/Pages/freetrial"
+            href="/freetrial"
             onClick={() => setOpen(false)}
-            className={getLinkClassName("/Pages/freetrial")}
+            className={getLinkClassName("/freetrial")}
           >
             تجربه مجانيه
           </Link>
 
           <Link
-            href="/Pages/Subscriptions"
+            href="/Subscriptions"
             onClick={() => setOpen(false)}
-            className={getLinkClassName("/Pages/Subscriptions")}
+            className={getLinkClassName("/Subscriptions")}
           >
             انضم الى عائلتنا
           </Link>
 
           <Link
-            href="/Pages/Channel"
+            href="/Channel"
             onClick={() => setOpen(false)}
-            className={getLinkClassName("/Pages/Channel")}
+            className={getLinkClassName("/Channel")}
           >
           قنوات
           </Link>
 
           <Link
-            href="/Pages/HelpCenter"
+            href="/HelpCenter"
             onClick={() => setOpen(false)}
-            className={getLinkClassName("/Pages/HelpCenter")}
+            className={getLinkClassName("/HelpCenter")}
           >
             مركز المساعده
           </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
         <div className="w-70 h-20 relative flex items-center justify-end">
           {/**  <Button>
             <Link
-              href="Pages/Subscriptions"
+              href=/Subscriptions"
               onClick={() => setOpen(false)}
               className="w-full text-start"
             >
@@ -147,21 +147,21 @@ export default function Navbar() {
 
           <Button_black>
             
-            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Pages/freetrial">
+            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/freetrial">
               تجربه مجانيه
             </Link>
           </Button_black>
 
           <Button_black>
           
-            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Pages/Subscriptions">
+            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Subscriptions">
               انضم الى عائلتنا
             </Link>
           </Button_black>
 
           <Button_black>
           
-            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/Pages/HelpCenter">
+            <Link onClick={() => setOpen(false)} className="w-full text-start" href="/HelpCenter">
               مركز المساعده
             </Link>
           </Button_black>
