@@ -1,16 +1,14 @@
+import type { Metadata } from "next";
+// @ts-expect-error: TypeScript sometimes fails to resolve side-effect CSS imports in the app directory
 import "./globals.css";
-import { Tajawal } from 'next/font/google'; // استدعاء الخط بشكل ذكي
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// إعداد الخط ليكون سريعاً جداً ولا يحجب الصفحة
-const tajawal = Tajawal({ 
-  subsets: ['arabic'],
-  weight: ['400', '500', '700'],
-  display: 'swap', 
-});
-
-
+// هذا الجزء هو الذي سيصلح الـ SEO فوراً
+export const metadata: Metadata = {
+  title: "أفضل اشتراك IPTV في المغرب 2026 – سيرفرات بدون تقطيع ودعم فني",
+  description: "استمتع بأقوى سيرفرات IPTV في المغرب مع دعم فني مستمر وجودة 4K فائقة السرعة.",
+};
 
 export default function RootLayout({
   children,
@@ -19,9 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
-      {/* ملاحظة: Next.js سيتعامل مع الـ Head تلقائياً من كائن metadata أعلاه */}
-      
-      <body className={`${tajawal.className} bg-black antialiased overflow-x-hidden`}>
+      {/* ستقوم Next.js بحقن الـ Title والـ Description تلقائياً هنا من كائن metadata */}
+      <body className="bg-black antialiased overflow-x-hidden font-sans">
         <Navbar />
         <main className="min-h-screen">
           {children}

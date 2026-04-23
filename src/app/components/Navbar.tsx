@@ -7,7 +7,7 @@ import Link from "next/link"; // نظام الروابط في Next.js
 
 import Button_black from "./Button_black"; 
  
-import useToggle from "../custom_hooks/useToggle";
+
 import { MenuIcon } from "./heroicons/MenuIcon";
 import { CloseIcon } from "./heroicons/CloseIcon";
 
@@ -16,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false); 
   const toggleMenu = () => setOpen(!open); 
 
-  const toggle1 = useToggle(false); 
+ 
 
   // دالة مساعدة لتحديد التنسيق إذا كان الرابط نشطاً (بديل NavLink)
   const getLinkClassName = (href: string) => {

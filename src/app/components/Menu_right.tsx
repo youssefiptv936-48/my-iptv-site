@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+
 import H2red from "./HtmlTools/H2red";
 import H2 from "./HtmlTools/H2";
 import P from "./HtmlTools/P";
