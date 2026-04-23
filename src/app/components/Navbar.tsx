@@ -8,8 +8,8 @@ import Link from "next/link"; // نظام الروابط في Next.js
 import Button_black from "./Button_black"; 
  
 import useToggle from "../custom_hooks/useToggle";
-import { MenuIcon } from "./Icons";
-import { CloseIcon } from "./Icons";
+import { MenuIcon } from "./heroicons/MenuIcon";
+import { CloseIcon } from "./heroicons/CloseIcon";
 
 export default function Navbar() {
   const pathname = usePathname(); // الحصول على المسار الحالي

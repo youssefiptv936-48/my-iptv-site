@@ -1,6 +1,5 @@
-"use client"; // ضروري لاستخدام useState في Next.js (App Router)
-import { useState } from 'react';
-import dynamic from 'next/dynamic';
+
+
 import Free from '@/app/components/freetrial/Free';
 import Subscrib from '@/app/components/freetrial/Subscriab';
 

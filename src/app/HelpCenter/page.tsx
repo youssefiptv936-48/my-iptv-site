@@ -1,4 +1,4 @@
-"use client"; // هذا السطر يحل المشكلة فوراً$
+
 
 import React from "react";
 import Head from "next/head"; // لإدارة الميتا تاج
@@ -10,7 +10,7 @@ import H2red from "@/app/components/HtmlTools/H2red";
 import P from "@/app/components/HtmlTools/P";
 
 export default function HelpCenter() {
-  const { openIndex, toggle } = useAccordion();
+ 
 
   // بيانات الـ Schema لتعزيز SEO في جوجل
   const faqSchema = {
@@ -79,8 +79,7 @@ export default function HelpCenter() {
             </H2red>
 
             <Accordion
-              isOpen={openIndex === 1}
-              onClick={() => toggle(1)}
+             
               title={"ما هي اشتراكات IPTV؟"}
             >
               <P>
@@ -99,8 +98,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 2}
-              onClick={() => toggle(2)}
+             
               title={"ماذا يمكنني ان اشاهد عبر اشتراكات IPTV؟"}
             >
               <P>يحتوي اشتراك IPTV على ثلاثة اقسام رئيسية وهي:</P>
@@ -120,8 +118,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 3}
-              onClick={() => toggle(3)}
+              
               title={"على كم جهاز يمكنني تشغيل اشتراك IPTV؟"}
             >
               <P>
@@ -136,8 +133,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 4}
-              onClick={() => toggle(4)}
+             
               title={"كيف احصل على مشاهدة بث مباشر بدون تقطيع؟"}
             >
               <P>
@@ -153,8 +149,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 5}
-              onClick={() => toggle(5)}
+              
               title={"كيف احصل على تجربة مجانية لاشتراكات IPTV؟"}
             >
               <P>
@@ -164,8 +159,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 6}
-              onClick={() => toggle(6)}
+          
               title={"كيف أشترك في IPTV؟"}
             >
               <P>
@@ -185,8 +179,7 @@ export default function HelpCenter() {
           طرق التشغيل والاجهزة التي تعمل عليها الاشتراكات
             </H2red>
             <Accordion
-              isOpen={openIndex === 7}
-              onClick={() => toggle(7)}
+            
               title={"ما هي الأجهزة التي تعمل عليها اشتراكات IPTV؟"}
             >
               <P>
@@ -196,8 +189,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 8}
-              onClick={() => toggle(8)}
+             
               title={"كيف أقوم بتشغيل الاشتراك أو التجربة المجانية؟"}
             >
               <P>
@@ -212,19 +204,17 @@ export default function HelpCenter() {
                العروض و طرق الدفع
             </H2red>
             <Accordion
-              isOpen={openIndex === 9}
-              onClick={() => toggle(9)}
+            
               title={"ما هي أسعار الاشتراكات وكيف يمكنني معرفة العروض؟"}
             >
               <P>
-                تفضل بزيارة صفحة "شراء اشتراكات IPTV" للاطلاع على أحدث العروض
+                تفضل بزيارة صفحة شراء اشتراكات IPTV للاطلاع على أحدث العروض
                 والأسعار الحالية.
               </P>
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 10}
-              onClick={() => toggle(10)}
+             
               title={"ما هي طرق الدفع المتوفرة؟"}
             >
               <P>
@@ -234,8 +224,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 11}
-              onClick={() => toggle(11)}
+             
               title={"هل يتم تجديد الاشتراك بشكل تلقائي؟"}
             >
               <P>
@@ -245,8 +234,7 @@ export default function HelpCenter() {
             </Accordion>
 
             <Accordion
-              isOpen={openIndex === 12}
-              onClick={() => toggle(12)}
+            
               title={"هل يمكن إلغاء الاشتراك واسترجاع المبلغ المالي؟"}
             >
               <P>

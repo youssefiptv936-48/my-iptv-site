@@ -10,13 +10,7 @@ const tajawal = Tajawal({
   display: 'swap', 
 });
 
-// الطريقة الاحترافية لتعريف معلومات الموقع في Next.js
-export const metadata = {
-  title: 'باقات اشتراك IPTV المتميزة | قنوات مباشرة وأفلام',
-  description: 'اشترك الآن في أفضل خدمة IPTV. أكثر من 46 ألف قناة و150 ألف فيلم بجودة عالية وبدون تقطيع.',
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
-};
+
 
 export default function RootLayout({
   children,

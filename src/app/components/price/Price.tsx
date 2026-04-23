@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { CheckIcon, EuroIcon } from "../Icons";
+import { EuroIcon } from "../heroicons/EuroIcon";
+import { CheckIcon } from "../heroicons/CheckIcon";
 
 interface PriceProps {
   month: string;   

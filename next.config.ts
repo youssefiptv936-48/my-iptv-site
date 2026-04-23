@@ -1,4 +1,5 @@
-import type { NextConfig } from "next";
+
+{/** import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -13,4 +14,23 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default nextConfig;*/}import withBundleAnalyzer from '@next/bundle-analyzer';
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  compiler: {
+    // حذف سجلات المبرمج عند رفع الموقع
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+};
+
+// إعداد المحلل (Analyzer)
+const analyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+export default analyzer(nextConfig);

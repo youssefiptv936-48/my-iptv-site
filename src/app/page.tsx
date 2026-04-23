@@ -1,10 +1,10 @@
-"use client"; // ضروري لاستخدام useAccordion
-// Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force
+ // ضروري لاستخدام useAccordion
+// Stop-Process -Id (Get-NetTCPConnection -LocalPort 4000).OwningProcess -Force
 
 // حل مشكلة المسار: تأكد أن الملف موجود في مجلد app باسم globals.css أو قم بتسميته Style.css في نفس المجلد
 import Script from 'next/script';
 import Accordion from "./components/Accordion";
-import useAccordion from "./custom_hooks/useAccordion";
+
 import Menu_left from "./components/MenuLeft/MenuLeft";
 import Section from "./components/MenuLeft/Section";
 import Menu_right from "./components/Menu_right";
@@ -19,15 +19,17 @@ import DivScreen from "./components/HtmlTools/DivScreen";
 import FlexBox from "./components/HtmlTools/FlexBox";
 import Youssef from "./components/HtmlTools/Youssef";
 import ButtonRed from "./components/HtmlTools/ButtonRed";
-import { MessageIcon, TvIcon, FilmoIcon } from "./components/Icons";
-import { ChatIcon } from "./components/Icons";
+import { FilmoIcon } from './components/heroicons/FilmoIcon';
+import { TvIcon } from './components/heroicons/TvIcon';
+import { ChatIcon } from './components/heroicons/ChatIcon';
+import { MessageIcon } from './components/heroicons/MessageIcon';
 
-import { TagIcon } from "./components/Icons";
+import { TagIcon } from './components/heroicons/TagIcon';
 import My_List from "./components/ChannelList/My_List";
 import H2Gray from "./components/HtmlTools/H2Gray";
-
+{/** */}
 export default function Home() {
-  const { openIndex, toggle } = useAccordion();
+  
   const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -278,8 +280,8 @@ export default function Home() {
 
         <Accordion
           title="كم سعر اشتراك iptv؟"
-          isOpen={openIndex === 1}
-          onClick={() => toggle(1)}
+          
+          
         >
           <P>تعتمد تكلفة الاشتراك على:</P>
           <P>• مدة الاشتراك (3 أشهر / سنة)</P>
@@ -288,8 +290,8 @@ export default function Home() {
 
         <Accordion
           title="ما هو iptv وكيف يعمل؟"
-          isOpen={openIndex === 2}
-          onClick={() => toggle(2)}
+          
+          
         >
           <P>
             هو تلفزيون يعمل عبر الإنترنت بدلاً من الأقمار الصناعية. مع اشتراك
@@ -303,8 +305,8 @@ export default function Home() {
 
         <Accordion
           title="ما هو اشتراك iptv"
-          isOpen={openIndex === 3}
-          onClick={() => toggle(3)}
+        
+          
         >
           <P>
             هو اشتراك واحد يشمل: قناة تلفزيونية مباشرة، قنوات رياضية مشفرة، بث
@@ -314,8 +316,8 @@ export default function Home() {
 
         <Accordion
           title="ما هو أفضل موقع اشتراكات iptv؟"
-          isOpen={openIndex === 4}
-          onClick={() => toggle(4)}
+          
+          
         >
           <P>
             نحن نقدم: أفضل سيرفر iptv، ثبات عالي، أكثر من 46565 قناة، أكثر من 95
@@ -325,8 +327,8 @@ export default function Home() {
 
         <Accordion
           title="كيف يتم الاشتراك في iptv؟"
-          isOpen={openIndex === 5}
-          onClick={() => toggle(5)}
+        
+          
         >
           <P>
             اطلب التجربة المجانية 12 ساعة، اختر الباقة، ادفع عبر البطاقة، يصلك
@@ -336,8 +338,8 @@ export default function Home() {
 
         <Accordion
           title="هل يمكن تشغيل اشتراكات iptv على اكثر من جهاز؟"
-          isOpen={openIndex === 7}
-          onClick={() => toggle(7)}
+        
+          
         >
           <P>
             يمكن توصيل الاشتراك بعدة أجهزة، لكن جهاز واحد فقط يمكنه المشاهدة في
@@ -347,8 +349,8 @@ export default function Home() {
 
         <Accordion
           title="هل لا يوجد اشتراك IPTV يعمل على جهازين؟"
-          isOpen={openIndex === 6}
-          onClick={() => toggle(6)}
+          
+          
         >
           <P>
             نعم، بعض الاشتراكات تسمح بذلك لكن البث يكون ضعيفاً. نوصي بجهاز واحد
