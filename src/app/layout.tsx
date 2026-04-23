@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// @ts-expect-error: TypeScript sometimes fails to resolve side-effect CSS imports in the app directory
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
