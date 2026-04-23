@@ -34,7 +34,7 @@ export default function Navbar() {
      open ? "bg-black" : ""
    }`}
  >
-   <div className=" font-black text-2xl text-red-500">BestIPTV</div>
+   <div className=" font-black text-2xl text-red-500">IPTVFORJA</div>
 
    {/* زر فتح القائمة */}
    {!open && (
@@ -62,7 +62,7 @@ export default function Navbar() {
 
       {/***** قسم شاشات الحاسوب (Desktop - Large screens) *****/}
       <nav className="hidden lg:flex justify-around items-center h-20">
-        <div className="w-40 bg-blue-800"> logo</div>
+        <div className="w-40 text-2xl text-red-500 font-bold"> IPTVFORJA</div>
 
         <div className="w-2xl text-amber-50 flex justify-between gap-3">
           <Link

@@ -17,7 +17,7 @@ import H2 from "./components/HtmlTools/H2";
 import P from "./components/HtmlTools/P";
 import DivScreen from "./components/HtmlTools/DivScreen";
 import FlexBox from "./components/HtmlTools/FlexBox";
-import Youssef from "./components/HtmlTools/Youssef";
+import IptvForja from "./components/HtmlTools/IptvForja";
 import ButtonRed from "./components/HtmlTools/ButtonRed";
 import { FilmoIcon } from './components/heroicons/FilmoIcon';
 import { TvIcon } from './components/heroicons/TvIcon';
@@ -95,16 +95,16 @@ export default function Home() {
           هل تبحث عن أفضل سيرفر IPTV في المغرب يجمع بين الثبات والسعر المناسب
         </H2Gray>
         <P>
-          <Youssef /> يوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة HD
+          <IptvForja /> يوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة HD
           وFull HD وUltra HD و2K و4K و8K ... مع مكتبة أفلام ومسلسلات ضخمة تحديث
           يومياً، لضمان تجربة مشاهدة مستقرة.
         </P>
 
         <H2>
           مع
-          <Youssef /> ستحصل على قنوات رياضية مشفرة، مكتبة VOD عالمية، وتجربة
+          <IptvForja /> ستحصل على قنوات رياضية مشفرة، مكتبة VOD عالمية، وتجربة
           مشاهدة مستقرة عبر سيرفر IPTV بجودة عالية وبدون مشاكل. كل ذلك عبر
-          <Youssef />
+          <IptvForja />
         </H2>
 
         <FlexBox className="">
