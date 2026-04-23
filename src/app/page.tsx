@@ -1,5 +1,5 @@
  // ضروري لاستخدام useAccordion
-// Stop-Process -Id (Get-NetTCPConnection -LocalPort 4y000).OwningProcess -Force
+// Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force
 
 // حل مشكلة المسار: تأكد أن الملف موجود في مجلد app باسم globals.css أو قم بتسميته Style.css في نفس المجلد
 import Script from 'next/script';

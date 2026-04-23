@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://my-iptv-site.vercel.app'
+  // التغيير الأساسي هنا: استخدم النطاق الجديد الخاص بك
+  const baseUrl = 'https://iptvforja.com'
 
-  // هنا نقوم بتعريف الروابط يدوياً للتأكد من أن TypeScript يفهم كل خاصية
   return [
     {
       url: baseUrl,
@@ -36,4 +36,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
   ]
-}
+} 
