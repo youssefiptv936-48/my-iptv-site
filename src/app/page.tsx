@@ -2,7 +2,10 @@
 // Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force
 
 // حل مشكلة المسار: تأكد أن الملف موجود في مجلد app باسم globals.css أو قم بتسميته Style.css في نفس المجلد
-import Script from 'next/script';
+import { Metadata } from 'next'
+import { HomeMeta } from './data_seo/Home_seo';
+import { HomeSchema } from './data_seo/Home_seo';
+
 import Accordion from "./components/Accordion";
 
 import Menu_left from "./components/MenuLeft/MenuLeft";
@@ -28,74 +31,52 @@ import { TagIcon } from './components/heroicons/TagIcon';
 import My_List from "./components/ChannelList/My_List";
 import H2Gray from "./components/HtmlTools/H2Gray";
 {/** */}
-export default function Home() {
-  
-  const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "name": "أفضل اشتراك IPTV في المغرب 2026",
-      "description": "اشتراك IPTV رسمي يوفر أكثر من 46,000 قناة بجودة 4K و Ultra HD مع ثبات كامل وبدون تقطيع.",
-      "brand": {
-        "@type": "Brand",
-        "name": "اسم موقعك"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://yourdomain.com/Subscriptions",
-        "priceCurrency": "MAD",
-        "price": "300.00",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "1250"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "ما هو أفضل اشتراك IPTV في المغرب 2026؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "يعتبر سيرفرنا أفضل اشتراك IPTV في المغرب لعام 2026 بفضل تكنولوجيا Anti-Freeze التي تضمن بثاً مستقراً بجودة 4K لجميع القنوات الرياضية والترفيهية."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "هل يوفر الاشتراك تجربة مجانية؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "نعم، نقدم تجربة IPTV مجانية لمدة 12 ساعة لاختبار جودة السيرفر وثبات القنوات قبل إتمام عملية الاشتراك."
-          }
-        }
-      ]
-    }
-  ]
-};
-  
+interface FAQEntity {
+  name: string;
+  acceptedAnswer: {
+    text: string;
+  };
+}
 
+// 1. إعداد الميتا داتا
+export const metadata: Metadata = {
+  title: HomeMeta.title,
+  description: HomeMeta.description,
+  keywords: HomeMeta.keywords,
+  openGraph: {
+    title: HomeMeta.title,
+    description: HomeMeta.description,
+    url: HomeMeta.url,
+    images: [{ url: HomeMeta.image }],
+    type: 'website',
+  },
+};
+
+export default function Home() {
+
+const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEntity;
   return (
     <main className="  relative overflow-x-auto">
-      {/* 2. نضع السكربت هنا (أول شيء داخل الـ return) */}
-      <Script
-        id="structured-data"
+    <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HomeSchema) }}
       />
+     
       <DivScreen>
         <H1>
-          أفضل اشتراك IPTV في المغرب 2026 – سيرفرات  بدون تقطيع ودعم فني مباشر
+         {HomeMeta.title}
         </H1>
+        
+           
+
+                    
         <H2Gray>
-          هل تبحث عن أفضل سيرفر IPTV في المغرب يجمع بين الثبات والسعر المناسب
+         {HomeMeta.description}
         </H2Gray>
+        <h3>{faqData[0]?.name}</h3>
+          <p>{faqData[0]?.acceptedAnswer?.text}</p>
         <P>
-          <IptvForja /> يوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة HD
+          <IptvForja /> هو الخيار الافضل لعام 2026 يوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة HD
           وFull HD وUltra HD و2K و4K و8K ... مع مكتبة أفلام ومسلسلات ضخمة تحديث
           يومياً، لضمان تجربة مشاهدة مستقرة.
         </P>
