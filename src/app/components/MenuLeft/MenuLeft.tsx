@@ -8,14 +8,14 @@ import P from "../HtmlTools/P";
 // تعريف الخصائص - استخدمنا "?" لجعلها اختيارية عند الحاجة
 interface MenuLeftProps {
   
-  title: string; // إجباري
-  paragraph1: string; // إجباري
-  paragraph2?: string;
-  paragraph3?: string;
-  paragraph4?: string;
-  paragraph5?: string;
-  paragraph6?: string;
-  className:string;
+  title: string;
+  description:string;
+   title2: string; // إجباري // إجباري
+  description2:string;
+  title3: string;
+  description3:string;
+  title4: string;
+  description4:string;
   buttonUrl: ReactNode;  // رابط الزر (إجباري بناءً على طلبك)
   children?:ReactNode;
 }
@@ -23,13 +23,13 @@ interface MenuLeftProps {
 export default function Menu_left({
   
   title,
-  paragraph1,
-  paragraph2,
-  paragraph3,
-  paragraph4,
-  paragraph5,
-  paragraph6,
-  className,
+  description,
+  title2,
+   description2,
+  title3,
+  description3,
+  title4,
+  description4,
   buttonUrl,
   children,
 }: MenuLeftProps) {
@@ -46,14 +46,16 @@ export default function Menu_left({
        <H2red>
         {title}
        </H2red>
-
+       <P>{description}</P> 
+       <H2>{title2}</H2>
+       <P>{description2}</P> 
+        <H2>{title3}</H2>
+       <P>{description3}</P> 
+        <H2>{title4}</H2>
+       <P>{description4}</P>
+         
         <div className=" mb-8 text-gray-200">
-          <h2  >{paragraph1}</h2>
-          {paragraph6 && <P>{paragraph6}</P>}
-          {paragraph2 && <P>{paragraph2}</P>}
-          {paragraph3 && <P>{paragraph3}</P>}
-          {paragraph4 && <P>{paragraph4}</P>}
-          {paragraph5 && <P>{paragraph5}</P>}
+         
           {buttonUrl}
         </div>
 

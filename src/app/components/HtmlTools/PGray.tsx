@@ -8,7 +8,7 @@ interface Props {
 export default function PGray({ children }: Props) {
   return (
     // نضع children هنا ليعرض النص الذي تكتبه بين الوسمين
-    <p className='   text-[16px]  text-zinc-400 leading-5'>
+    <p className='   text-[16px]  text-zinc-400 leading-6'>
       {children}
     </p>
   );

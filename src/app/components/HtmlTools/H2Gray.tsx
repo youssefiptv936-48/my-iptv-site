@@ -8,8 +8,8 @@ interface Props {
 export default function H2Gray({ children }: Props) {
   return (
     // نضع children هنا ليعرض النص الذي تكتبه بين الوسمين
-    <p className='   text-[16px]  text-zinc-400'>
+    <h2 className='   text-[16px]  text-zinc-400'>
       {children}
-    </p>
+    </h2>
   );
 }

@@ -1,10 +1,10 @@
- // ضروري لاستخدام useAccordion
+// ضروري لاستخدام useAccordion
 // Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force
 
 // حل مشكلة المسار: تأكد أن الملف موجود في مجلد app باسم globals.css أو قم بتسميته Style.css في نفس المجلد
-import { Metadata } from 'next'
-import { HomeMeta } from './data_seo/Home_seo';
-import { HomeSchema } from './data_seo/Home_seo';
+import { Metadata } from "next";
+import { HomeMeta } from "./data_seo/Home_seo";
+import { HomeSchema } from "./data_seo/Home_seo";
 
 import Accordion from "./components/Accordion";
 
@@ -22,15 +22,18 @@ import DivScreen from "./components/HtmlTools/DivScreen";
 import FlexBox from "./components/HtmlTools/FlexBox";
 import IptvForja from "./components/HtmlTools/IptvForja";
 import ButtonRed from "./components/HtmlTools/ButtonRed";
-import { FilmoIcon } from './components/heroicons/FilmoIcon';
-import { TvIcon } from './components/heroicons/TvIcon';
-import { ChatIcon } from './components/heroicons/ChatIcon';
-import { MessageIcon } from './components/heroicons/MessageIcon';
+import { FilmoIcon } from "./components/heroicons/FilmoIcon";
+import { TvIcon } from "./components/heroicons/TvIcon";
+import { ChatIcon } from "./components/heroicons/ChatIcon";
+import { MessageIcon } from "./components/heroicons/MessageIcon";
 
-import { TagIcon } from './components/heroicons/TagIcon';
+import { TagIcon } from "./components/heroicons/TagIcon";
 import My_List from "./components/ChannelList/My_List";
 import H2Gray from "./components/HtmlTools/H2Gray";
-{/** */}
+import PGray from "./components/HtmlTools/PGray";
+{
+  /** */
+}
 interface FAQEntity {
   name: string;
   acceptedAnswer: {
@@ -48,44 +51,34 @@ export const metadata: Metadata = {
     description: HomeMeta.description,
     url: HomeMeta.url,
     images: [{ url: HomeMeta.image }],
-    type: 'website',
+    type: "website",
   },
 };
 
 export default function Home() {
-
-const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEntity;
+  const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] })
+    .mainEntity;
   return (
     <main className="  relative overflow-x-auto">
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HomeSchema) }}
       />
-     
       <DivScreen>
-        <H1>
-         {HomeMeta.title}
-        </H1>
-        
-           
+        <H1>{HomeMeta.title}</H1>
 
-                    
-        <H2Gray>
-         {HomeMeta.description}
-        </H2Gray>
-        <h3>{faqData[0]?.name}</h3>
-          <p>{faqData[0]?.acceptedAnswer?.text}</p>
-        <P>
-          <IptvForja /> هو الخيار الافضل لعام 2026 يوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة HD
-          وFull HD وUltra HD و2K و4K و8K ... مع مكتبة أفلام ومسلسلات ضخمة تحديث
-          يومياً، لضمان تجربة مشاهدة مستقرة.
-        </P>
+        <P>{HomeMeta.description}</P>
 
         <H2>
           مع
-          <IptvForja /> ستحصل على قنوات رياضية مشفرة، مكتبة VOD عالمية، وتجربة
-          مشاهدة مستقرة عبر سيرفر IPTV بجودة عالية وبدون مشاكل. كل ذلك عبر
-          <IptvForja />
+          <strong>
+            <IptvForja />
+          </strong>
+          ستحصل على قنوات رياضية مشفرة، مكتبة VOD عالمية، وتجربة مشاهدة مستقرة
+          عبر سيرفر IPTV بجودة عالية وبدون مشاكل. كل ذلك عبر
+          <strong>
+            <IptvForja />
+          </strong>
         </H2>
 
         <FlexBox className="">
@@ -96,24 +89,13 @@ const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEnt
       <My_List />
       {/**<My_List /> */}
       {/* --- القسم الأول: Menu_right --- */}
-      نحن نوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة Ultra HD، مع
-      مكتبة أفلام ومسلسلات ضخمة تُحدث يومياً، لضمان تجربة مشاهدة مستقرة تغنيك عن
-      البحث عن **موقع شراء IPTV** موثوق.{" "}
-      <Menu_right
-        title={
-          "اشتراك IPTV الأكثر كفاءة… بجودة عالية، بدون تقطيع، وبثّ ثابت 24/7"
-        }
-        paragraph1={
-          "نحن نقدم لك اشتراك IPTV يعتمد على سيرفرات مستقرة عالية الأداء، مصممة لضمان سرعة التنقل بين القنوات بدون أي بطء أو انقطاعات."
-        }
-        paragraph2={
-          "سواء كنت تريد اشتراك IPTV لمدة سنة أو اشتراك لمده سته اشهر او ثلاث اشهر او شهر في نفس الوقت، ستجد جميع الخيارات جاهزة للاستخدام الفوري."
-        }
-        paragraph3={"نحن المتجر الرسمي الذي يضمن لك:"}
-        paragraph4={
-          " مشاهده من أي دولة … السعودية، أوروبا، الخليج، العالم... تفعيل فوري خلال ثوانٍ بدون التزام – وبدون بيانات مصرفية للتجربة المجانية"
-        }
-      >
+
+      <Menu_right title={faqData[0]?.name}>
+        <P>{faqData[0]?.acceptedAnswer?.text}</P>
+        <H2Gray>{faqData[1]?.name}</H2Gray>
+        <PGray>{faqData[1]?.acceptedAnswer?.text}</PGray>
+        <H2Gray>{faqData[2]?.name}</H2Gray>
+        <PGray>{faqData[2]?.acceptedAnswer?.text}</PGray>
         <ButtonRed
           href="/Subscriptions"
           LinkText="اختر باقتك المناسبة"
@@ -121,29 +103,17 @@ const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEnt
       </Menu_right>
       {/* --- القسم الثاني: Menu_left --- */}
       <Menu_left
-        className=""
-        title={
-          "أكثر من 46565 قناة مباشرة – عربية وعالمية – بتقنيات SD / HD / FHD / 4K / 8k"
-        }
-        paragraph1={
-          "باستخدام اشتراك IPTV  ستشاهد أكبر مجموعة قنوات مقسّمة حسب النوع والدولة:"
-        }
-        paragraph2={
-          "كل قناة تعمل بجودات متنوعة لضمان تشغيلها على أي سرعة إنترنت، ليبقى اشتراك IPTV بدون تقطيع مهما كان اتصالك."
-        }
-        paragraph3={
-          "• القنوات العربية • القنوات الرياضية المشفرة • باقات عالمية • قنوات ترفيهية • قنوات الأطفال • قنوات الأخبار • القنوات الأجنبية • قنوات احتياطية لكل قناة لضمان عدم حدوث تقطيع"
-        }
-        paragraph4={
-          " كل قناة تعمل بجودات متنوعة لضمان تشغيلها على أي سرعة إنترنت، ليبقى اشتراك IPTV بدون تقطيع مهما كان اتصالك."
-        }
-        buttonUrl={
-          <ButtonRed
-            href="/Subscriptions"
-            LinkText="اشترك الآن وابدأ المشاهدة"
-          />
-        }
+        title={faqData[3]?.name}
+        description={faqData[3]?.acceptedAnswer?.text}
+        title2={faqData[4]?.name}
+        description2={faqData[4]?.acceptedAnswer?.text}
+       title3={faqData[5]?.name}
+        description3={faqData[5]?.acceptedAnswer?.text}
+        title4={faqData[6]?.name}
+        description4={faqData[6]?.acceptedAnswer?.text}
+        buttonUrl={ <ButtonRed href="/Subscriptions" LinkText="اشترك الآن وابدأ المشاهدة"/> }
       >
+        
         <Section
           icoun={"fa-regular fa-message"}
           title={"أفضل خدمة دعم فني – 24/7"}
@@ -187,10 +157,6 @@ const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEnt
       {/* --- القسم الثالث: Menu_right (VOD) --- */}
       <Menu_right
         title={"مكتبة أفلام ومسلسلات VOD – أكثر من 153859 فيلم و39949 مسلسل"}
-        paragraph1="معنا لن تحتاج لأي منصة أخرى. تحصل تلقائيًا على:"
-        paragraph2=""
-        paragraph3=""
-        paragraph4=""
       >
         <P>✓ افلام جوده عاليه</P>
         <P>✓ مسلسلات عربية وعالمية</P>
@@ -205,26 +171,16 @@ const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEnt
       </Menu_right>
       {/* --- القسم الرابع: Menu_left (Free Trial) --- */}
       <Menu_left
-        className=""
         title={
           "اشتراك IPTV مجاني لمدة 12 ساعة – بدون تقطيع – وبدون بيانات مصرفية"
         }
-        paragraph1={
-          "نوفر لك هذه التجربة المجانية لتتأكد من سرعة التنقل بين القنوات وتفحص ثبات البث بجودةعاليه  يمكنك الآن اختبار سرعة التنقل بين القنوات وتفحص ثبات البث بنفسك، "
-        }
-        paragraph6={"ما الذي ستحصل عليه في تجربتك المجانية؟"}
-        paragraph2={
-          "✓ الوصول الشامل لجميع القنوات الرياضية والسينمائية بجودة 4K و Ultra HD."
-        }
-        paragraph3={
-          "✓ تجربة كاملة لجميع الباقات العربية والعالمية المقسمة حسب الدولة والنوع."
-        }
-        paragraph4={
-          "✓ تصفح مكتبة الأفلام والمسلسلات (VOD) المحدثة يومياً بأعلى دقة."
-        }
-        paragraph5={
-          "✓ تفعيل فوري وآمن: بدون قيود، بدون عقود، والأهم.. بدون طلب أي بيانات بطاقة بنكية."
-        }
+        description=""
+        title2=""
+        description2=""
+        title3=""
+        description3=""
+         title4=""
+        description4=""
         buttonUrl={
           <ButtonRed
             href="/freetrial"
@@ -259,21 +215,13 @@ const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEnt
       <div className="py-10 text-center   px-4">
         <H2>الأسئلة الشائعة حول اشتراك IPTV</H2>
 
-        <Accordion
-          title="كم سعر اشتراك iptv؟"
-          
-          
-        >
+        <Accordion title="كم سعر اشتراك iptv؟">
           <P>تعتمد تكلفة الاشتراك على:</P>
           <P>• مدة الاشتراك (3 أشهر / سنة)</P>
           <P>يمكنك اختيار ما يناسبك… مع توفير كبير عند الاشتراك السنوي.</P>
         </Accordion>
 
-        <Accordion
-          title="ما هو iptv وكيف يعمل؟"
-          
-          
-        >
+        <Accordion title="ما هو iptv وكيف يعمل؟">
           <P>
             هو تلفزيون يعمل عبر الإنترنت بدلاً من الأقمار الصناعية. مع اشتراك
             iptv بدون تقطيع تستطيع مشاهدة:
@@ -284,55 +232,35 @@ const faqData = (HomeSchema["@graph"][1] as { mainEntity: FAQEntity[] }).mainEnt
           </P>
         </Accordion>
 
-        <Accordion
-          title="ما هو اشتراك iptv"
-        
-          
-        >
+        <Accordion title="ما هو اشتراك iptv">
           <P>
             هو اشتراك واحد يشمل: قناة تلفزيونية مباشرة، قنوات رياضية مشفرة، بث
             عالمي، باقات حسب الدولة، قنوات السعودية، مكتبة VOD ضخمة، بدون تقطيع.
           </P>
         </Accordion>
 
-        <Accordion
-          title="ما هو أفضل موقع اشتراكات iptv؟"
-          
-          
-        >
+        <Accordion title="ما هو أفضل موقع اشتراكات iptv؟">
           <P>
             نحن نقدم: أفضل سيرفر iptv، ثبات عالي، أكثر من 46565 قناة، أكثر من 95
             باقة، دعم على مدار الساعة، تجارب مجانية حقيقية.
           </P>
         </Accordion>
 
-        <Accordion
-          title="كيف يتم الاشتراك في iptv؟"
-        
-          
-        >
+        <Accordion title="كيف يتم الاشتراك في iptv؟">
           <P>
             اطلب التجربة المجانية 12 ساعة، اختر الباقة، ادفع عبر البطاقة، يصلك
             الاشتراك تلقائياً خلال دقائق.
           </P>
         </Accordion>
 
-        <Accordion
-          title="هل يمكن تشغيل اشتراكات iptv على اكثر من جهاز؟"
-        
-          
-        >
+        <Accordion title="هل يمكن تشغيل اشتراكات iptv على اكثر من جهاز؟">
           <P>
             يمكن توصيل الاشتراك بعدة أجهزة، لكن جهاز واحد فقط يمكنه المشاهدة في
             نفس الوقت لضمان استقرار البث.
           </P>
         </Accordion>
 
-        <Accordion
-          title="هل لا يوجد اشتراك IPTV يعمل على جهازين؟"
-          
-          
-        >
+        <Accordion title="هل لا يوجد اشتراك IPTV يعمل على جهازين؟">
           <P>
             نعم، بعض الاشتراكات تسمح بذلك لكن البث يكون ضعيفاً. نوصي بجهاز واحد
             لضمان جودة 4K المستقرة.

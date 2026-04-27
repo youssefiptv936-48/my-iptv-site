@@ -14,10 +14,7 @@ import H2Gray from "./HtmlTools/H2Gray";
 interface MenuRightProps {
  
   title: string;
-  paragraph1: string;
-  paragraph2?: string;
-  paragraph3?: string;
-  paragraph4?: string;
+ 
   
   children?: React.ReactNode;
 
@@ -25,12 +22,9 @@ interface MenuRightProps {
 
 export default function Menu_right({
   title,
-  paragraph1,
-  paragraph2,
-  paragraph3,
-  paragraph4,
+  
 
-  children,
+  children
  
 }: MenuRightProps) {
   return (
@@ -47,26 +41,11 @@ export default function Menu_right({
         </H2red>
 
         <div className={`space-y-4 text-[#e5e7eb] `}>
-          <H2 >{paragraph1}</H2>
-          <P>{paragraph2}</P>
-          <H2Gray >{paragraph3}</H2Gray>
-          <PGray >{paragraph4}</PGray>
+         {children}
         </div>
 
-        <div className="mt-4 leading-7">{children}</div>
-           {/** 
-        <div className="mt-8">
-          {buttonText && buttonUrl && (
-            <Link
-              href={buttonUrl}
-              className="px-12 py-3 inline-block rounded-r-3xl rounded-ee-3xl font-bold text-xl bg-linear-to-l from-[#ed0e0e] to-[#a30525] hover:scale-105 transition-transform"
-            >
-              {buttonText}
-            </Link>
-          )}
-         
-        </div>
-        */}
+       
+        
       </div>
     </section>
   );
