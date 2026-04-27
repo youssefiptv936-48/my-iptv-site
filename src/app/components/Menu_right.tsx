@@ -1,10 +1,7 @@
 import React from "react";
 
 import H2red from "./HtmlTools/H2red";
-import H2 from "./HtmlTools/H2";
-import P from "./HtmlTools/P";
-import PGray from "./HtmlTools/PGray";
-import H2Gray from "./HtmlTools/H2Gray";
+
 
 // 1. استيراد مكون الصور الذكي
 
@@ -28,7 +25,7 @@ export default function Menu_right({
 
       {/* 2. قسم المحتوى النصي */}
       <div className="mt-3 lg:w-[45%] text-right leading-6">
-        <H2red className="inline-block text-2xl font-bold mb-4 pr-3 border-r-4 border-solid border-[#ff0000]">
+        <H2red >
           {title}
         </H2red>
 

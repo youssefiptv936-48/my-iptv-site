@@ -4,7 +4,7 @@ import React from "react";
 import Head from "next/head"; // لإدارة الميتا تاج
 import Link from "next/link"; // Link الخاص بـ Next.js
 import Accordion from "@/app/components/Accordion";
-import useAccordion from "@/app/custom_hooks/useAccordion";
+
 import H2 from "@/app/components/HtmlTools/H2";
 import H2red from "@/app/components/HtmlTools/H2red";
 import P from "@/app/components/HtmlTools/P";
