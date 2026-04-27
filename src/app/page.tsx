@@ -82,7 +82,7 @@ export default function Home() {
         </H2>
 
         <FlexBox className="">
-          <ButtonRed href="/freetrial" LinkText="جرّب قبل أن تشترك" />
+          <ButtonRed href="/freetrial" LinkText="جرّب قبل أن تشتركa" />
           <ButtonRed href="/Subscriptions" LinkText=" ابدا المشاهده الان" />
         </FlexBox>
       </DivScreen>
