@@ -5,7 +5,7 @@
 import { Metadata } from "next";
 import { HomeMeta } from "./data_seo/Home_seo";
 import { HomeSchema } from "./data_seo/Home_seo";
-
+import IptvForja_P from "./components/HtmlTools/IptvForja_P";
 import Accordion from "./components/Accordion";
 
 import Menu_left from "./components/MenuLeft/MenuLeft";
@@ -71,14 +71,14 @@ export default function Home() {
 
         <H2>
           مع
-          <strong>
-            <IptvForja />
-          </strong>
+          
+            <IptvForja  />
+          
           ستحصل على قنوات رياضية مشفرة، مكتبة VOD عالمية، وتجربة مشاهدة مستقرة
           عبر سيرفر IPTV بجودة عالية وبدون مشاكل. كل ذلك عبر
-          <strong>
-            <IptvForja />
-          </strong>
+          
+            <IptvForja  />
+          
         </H2>
 
         <FlexBox className="">
@@ -89,13 +89,13 @@ export default function Home() {
       <My_List />
       {/**<My_List /> */}
       {/* --- القسم الأول: Menu_right --- */}
-
+          
       <Menu_right title={faqData[0]?.name}>
         <P>{faqData[0]?.acceptedAnswer?.text}</P>
-        <H2Gray>{faqData[1]?.name}</H2Gray>
-        <PGray>{faqData[1]?.acceptedAnswer?.text}</PGray>
-        <H2Gray>{faqData[2]?.name}</H2Gray>
-        <PGray>{faqData[2]?.acceptedAnswer?.text}</PGray>
+        <H2>تعرف على باقات اشتراك المتوفرة في <IptvForja /></H2>
+       <P>سواء كنت تريد اشتراك <IptvForja_P /> لمدة سنة أو اشتراك لمدة ستة أشهر أو ثلاث أشهر أو شهر في نفس الوقت، ستجد جميع الخيارات جاهزة للاستخدام الفوري</P>
+        <H2Gray><IptvForja /> المتجر الرسمي الذي يضمن لك:</H2Gray>
+        <PGray>مشاهده من أي دولة … المغرب السعودية، أوروبا، الخليج، العالم... تفعيل فوري خلال ثوانٍ بدون التزام – وبدون بيانات مصرفية للتجربة المجانية</PGray>
         <ButtonRed
           href="/Subscriptions"
           LinkText="اختر باقتك المناسبة"
@@ -103,43 +103,40 @@ export default function Home() {
       </Menu_right>
       {/* --- القسم الثاني: Menu_left --- */}
       <Menu_left
-        title={faqData[3]?.name}
-        description={faqData[3]?.acceptedAnswer?.text}
-        title2={faqData[4]?.name}
-        description2={faqData[4]?.acceptedAnswer?.text}
-       title3={faqData[5]?.name}
-        description3={faqData[5]?.acceptedAnswer?.text}
-        title4={faqData[6]?.name}
-        description4={faqData[6]?.acceptedAnswer?.text}
+        title={faqData[1]?.name}
+        description={faqData[1]?.acceptedAnswer?.text}
+       li_1="تغطية كاملة للدوريات الكبرى بجودات  HD وFull HD وUltra HD و2K و4K و8K ... مستقرة"
+       li_2="ترتيب دقيق حسب الدولة (المغرب، الخليج، مصر) مع باقات ترفيهية"
+       li_3="قنوات أوروبية وأمريكية مترجمة، بالإضافة إلى الوثائقيات العالمية."
+       li_4="مكتبة أفلام (VOD) متجددة يومياً وقنوات آمنة مخصصة للأطفال."
+       li_5="أكثر من 46,000 قناة حية ومكتبة أفلام ضخمة بين يديك."
+       li_6="جودات متعددة تضمن استقرار البث على أي سرعة إنترنت."
+       li_7="قنوات بديلة تضمن استمرار المشاهدة أثناء المباريات الكبرى."
+       li_8="احصل على IPTVFORJA وابدأ المشاهدة خلال ثوانٍ معدودة."
+       li_9="إضافة تلقائية لأحدث القنوات والترددات دون تدخل منك."
         buttonUrl={ <ButtonRed href="/Subscriptions" LinkText="اشترك الآن وابدأ المشاهدة"/> }
-      >
+      > 
         
         <Section
           icoun={"fa-regular fa-message"}
-          title={"أفضل خدمة دعم فني – 24/7"}
-          paragraph={
-            "من أول لحظة تبدأ فيها البحث عن اشتراك IPTV مناسب وحتى تشغيل الاشتراك على جهازك، فريقنا يقدّم لك الدعم المستمر. سواء كنت تريد تفعيل اشتراك IPTV أو حل مشكلة في جهازك، نحن متواجدون دائمًا."
-          }
+          title={faqData[2]?.name}
+          description={faqData[2]?.acceptedAnswer?.text}
         >
           <ChatIcon />
         </Section>
 
         <Section
           icoun={"fa-solid fa-tv"}
-          title={"اشتراك IPTV يعمل على كل الأجهزة"}
-          paragraph={
-            "اشتراك IPTV يعمل على جميع الأجهزة ويدعم كل الأنظمة، مع دليل شرح كامل ومفصّل لتفعيل اشتراك IPTV خطوة بخطوة على أي جهاز بسهولة تامة."
-          }
+          title={faqData[3]?.name}
+        description={faqData[3]?.acceptedAnswer?.text}
         >
           <TvIcon />
         </Section>
 
         <Section
           icoun={"fa-solid fa-envelope"}
-          title={"تفعيل وتسليم فوري"}
-          paragraph={
-            "نحن نقدم اشتراك اي بي تي في رسمي يتميز بجودة بث ممتازة مع قناة احتياطية لكل قناة وأسعار منافسة وعروض مستمرة بالإضافة إلى اشتراك IPTV لمدة سنة كاملة لمن يرغب في أفضل توفير"
-          }
+          title={faqData[4]?.name}
+        description={faqData[4]?.acceptedAnswer?.text}
         >
           <MessageIcon />
         </Section>
@@ -147,9 +144,7 @@ export default function Home() {
         <Section
           icoun={"fa-solid fa-tag"}
           title={"اشتراك واحد… يغنيك عن عشرات الاشتراكات"}
-          paragraph={
-            "بسبب الكم الهائل من القنوات والباقات والمحتوى المتوفر، لن تحتاج لأي اشتراك آخر. هذا ما يجعل أفضل اشتراك IPTV بدون تقطيع وبدون الحاجة لشراء اشتراكات متعددة."
-          }
+          description=""
         >
           <TagIcon />
         </Section>
@@ -175,12 +170,15 @@ export default function Home() {
           "اشتراك IPTV مجاني لمدة 12 ساعة – بدون تقطيع – وبدون بيانات مصرفية"
         }
         description=""
-        title2=""
-        description2=""
-        title3=""
-        description3=""
-         title4=""
-        description4=""
+        li_1=""
+       li_2=""
+       li_3=""
+       li_4=""
+       li_5=""
+       li_6=""
+        li_7=""
+       li_8=""
+       li_9=""
         buttonUrl={
           <ButtonRed
             href="/freetrial"

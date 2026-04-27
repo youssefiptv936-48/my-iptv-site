@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import H2red from "../HtmlTools/H2red";
-import H2 from "../HtmlTools/H2";
+
 import P from "../HtmlTools/P";
 
 // تعريف الخصائص - استخدمنا "?" لجعلها اختيارية عند الحاجة
@@ -10,12 +10,15 @@ interface MenuLeftProps {
   
   title: string;
   description:string;
-   title2: string; // إجباري // إجباري
-  description2:string;
-  title3: string;
-  description3:string;
-  title4: string;
-  description4:string;
+  li_1:string;
+  li_2:string;
+  li_3:string;
+  li_4:string;
+  li_5:string;
+  li_6:string;
+  li_7:string;
+  li_8:string;
+  li_9:string;
   buttonUrl: ReactNode;  // رابط الزر (إجباري بناءً على طلبك)
   children?:ReactNode;
 }
@@ -24,12 +27,15 @@ export default function Menu_left({
   
   title,
   description,
-  title2,
-   description2,
-  title3,
-  description3,
-  title4,
-  description4,
+  li_1,
+  li_2,
+  li_3,
+  li_4,
+  li_5,
+  li_6,
+  li_7,
+  li_8,
+  li_9,
   buttonUrl,
   children,
 }: MenuLeftProps) {
@@ -46,13 +52,20 @@ export default function Menu_left({
        <H2red>
         {title}
        </H2red>
-       <P>{description}</P> 
-       <H2>{title2}</H2>
-       <P>{description2}</P> 
-        <H2>{title3}</H2>
-       <P>{description3}</P> 
-        <H2>{title4}</H2>
-       <P>{description4}</P>
+          <P>{description}</P> 
+       <ul className="space-y-3">
+        <li>{li_1}</li>
+        <li>{li_2}</li>
+        <li>{li_3}</li>
+        <li>{li_4}</li>
+        <li>{li_5}</li>
+        <li>{li_6}</li>
+        <li>{li_7}</li>
+        <li>{li_8}</li>
+        <li>{li_9}</li>
+       </ul>
+        
+       
          
         <div className=" mb-8 text-gray-200">
          

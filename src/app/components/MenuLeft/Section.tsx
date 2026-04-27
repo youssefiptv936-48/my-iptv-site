@@ -5,11 +5,11 @@ import PGray from "../HtmlTools/PGray";
 interface SectionProps {
   icoun: string;
   title: string;
-  paragraph: string;
+  description: string;
   children?: React.ReactNode;
 }
 
-export default function Section({ children, title, paragraph }: SectionProps) {
+export default function Section({ children, title, description }: SectionProps) {
   return (
     // استخدام <section> بدلاً من <div> لتحسين الـ SEO (Semantic HTML)
     <section className='text-center flex flex-col items-center justify-center border-solid border-2 border-[#ed0e0e] rounded-2xl p-2 m-1  '>
@@ -20,7 +20,7 @@ export default function Section({ children, title, paragraph }: SectionProps) {
         
         <div><H2 >{title}</H2></div>
         {/* الفقرة */}
-        <div><PGray >{paragraph}</PGray></div>
+        <div><PGray >{description}</PGray></div>
         
     </section>
   )

@@ -6,26 +6,18 @@ import P from "./HtmlTools/P";
 import PGray from "./HtmlTools/PGray";
 import H2Gray from "./HtmlTools/H2Gray";
 
-
-
-
 // 1. استيراد مكون الصور الذكي
 
 interface MenuRightProps {
- 
   title: string;
- 
-  
-  children?: React.ReactNode;
 
+  children?: React.ReactNode;
 }
 
 export default function Menu_right({
   title,
-  
 
-  children
- 
+  children,
 }: MenuRightProps) {
   return (
     <section className="p-5 lg:flex lg:flex-row-reverse lg:justify-around lg:items-center lg:leading-8 bg-black text-white">
@@ -40,12 +32,7 @@ export default function Menu_right({
           {title}
         </H2red>
 
-        <div className={`space-y-4 text-[#e5e7eb] `}>
-         {children}
-        </div>
-
-       
-        
+        <div className={`space-y-4 text-[#e5e7eb] `}>{children}</div>
       </div>
     </section>
   );
