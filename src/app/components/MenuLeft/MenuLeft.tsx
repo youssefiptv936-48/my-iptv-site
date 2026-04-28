@@ -40,10 +40,10 @@ export default function Menu_left({
   children,
 }: MenuLeftProps) {
   return (
-    <section className="lg:flex relative lg:justify-around leading-6 items-center p-2   text-slate-200">
+    <section className="md:flex  relative md:justify-around leading-6  p-2   text-slate-200 md:h-screen ">
       
       {/* 1. قسم الأيقونات أو المحتوى الإضافي */}
-      <div className=" lg:w-[48%]   lg:min-h-96 grid grid-cols-2  gap-4">
+      <div className=" lg:w-[48%]     lg:h-full grid grid-cols-2  ">
         {children}
       </div>
 

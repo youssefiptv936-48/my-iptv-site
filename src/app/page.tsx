@@ -143,8 +143,8 @@ export default function Home() {
 
         <Section
           icoun={"fa-solid fa-tag"}
-          title={"اشتراك واحد… يغنيك عن عشرات الاشتراكات"}
-          description=""
+           title={faqData[5]?.name}
+        description={faqData[5]?.acceptedAnswer?.text}
         >
           <TagIcon />
         </Section>
