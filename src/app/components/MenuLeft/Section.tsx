@@ -3,7 +3,7 @@ import PGray from "../HtmlTools/PGray";
 
 // تحديد أنواع البيانات (Types) يحل مشكلة الـ 'any' ويجعل الكود أكثر أماناً
 interface SectionProps {
-  icoun: string;
+
   title: string;
   description: string;
   children?: React.ReactNode;
@@ -18,7 +18,7 @@ export default function Section({ children, title, description }: SectionProps) 
         
         {/* العنوان */}
         
-        <h2 className="font-bold" >{title}</h2>
+        <h2 className="font-bold mb-3" >{title}</h2>
         {/* الفقرة */}
         <p className="text-sm" >{description}</p>
         

@@ -4,15 +4,15 @@ import H2 from "./HtmlTools/H2";
 
 interface Props {
   title: string;
-  paragraph: string;
+  description: string;
   children: ReactNode;
   ButtonUrl: ReactNode;
 }
 
-export default function ArticleCard({ title, paragraph, children, ButtonUrl }: Props) {
+export default function ArticleCard({ title, description, children, ButtonUrl }: Props) {
   return (
     <article
-      className="md:max-w-70 min-h-96 border-2 p-0.5 border-solid border-[#ff0000] rounded-xl flex flex-col items-center overflow-hidden"
+      className="  md:max-w-70 h-[28em] md:mt-15 border-2 p-0.5 border-solid border-[#ff0000] rounded-xl flex flex-col items-center overflow-hidden"
       itemScope
       itemType="https://schema.org/Article"
     >
@@ -22,18 +22,20 @@ export default function ArticleCard({ title, paragraph, children, ButtonUrl }: P
       </div>
          <div className="bg-red-500 h-0.5 w-32 text-transparent">.</div>
       {/* القسم السفلي (النصوص والزر) - أخذ باقي المساحة */}
-      <div className="flex-1  p-3 flex flex-col justify-between items-center">
+      <div className="    p-3 flex flex-col h-72">
         
         <div className="mb-4 p-x-2  text-center">
           <H2>{title}</H2>
           
-             <P>{paragraph}</P>
+             <P>{description}</P>
           
         </div>
 
-        {/* وضع الزر في الأسفل دائماً */}
         
-          {ButtonUrl}
+        <div >
+           {ButtonUrl}
+        </div>
+          
         
         
       </div>

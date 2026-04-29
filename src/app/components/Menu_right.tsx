@@ -29,7 +29,7 @@ export default function Menu_right({
           {title}
         </H2red>
 
-        <div className={`space-y-4 text-[#e5e7eb] `}>{children}</div>
+        <div className={`space-y-4 text-[#e5e7eb]  `}>{children}</div>
       </div>
     </section>
   );

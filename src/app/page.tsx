@@ -23,14 +23,17 @@ import FlexBox from "./components/HtmlTools/FlexBox";
 import IptvForja from "./components/HtmlTools/IptvForja";
 import ButtonRed from "./components/HtmlTools/ButtonRed";
 import { FilmoIcon } from "./components/heroicons/FilmoIcon";
-import { TvIcon } from "./components/heroicons/TvIcon";
-import { ChatIcon } from "./components/heroicons/ChatIcon";
-import { MessageIcon } from "./components/heroicons/MessageIcon";
+import { TvIcon } from "./components/heroicons/TvIcon"
+import Bolt from "./components/heroicons/Bolt";
+import Banknotes from "./components/heroicons/Banknotes";
+import Signal from "./components/heroicons/Signal";
+import SupportIcon from "./components/heroicons/SupportIcon";
 
 import { TagIcon } from "./components/heroicons/TagIcon";
 import My_List from "./components/ChannelList/My_List";
 import H2Gray from "./components/HtmlTools/H2Gray";
 import PGray from "./components/HtmlTools/PGray";
+import Rocket from "./components/heroicons/Rocket";
 {
   /** */
 }
@@ -71,14 +74,10 @@ export default function Home() {
 
         <H2>
           مع
-          
-            <IptvForja  />
-          
+          <IptvForja />
           ستحصل على قنوات رياضية مشفرة، مكتبة VOD عالمية، وتجربة مشاهدة مستقرة
           عبر سيرفر IPTV بجودة عالية وبدون مشاكل. كل ذلك عبر
-          
-            <IptvForja  />
-          
+          <IptvForja />
         </H2>
 
         <FlexBox className="">
@@ -89,13 +88,24 @@ export default function Home() {
       <My_List />
       {/**<My_List /> */}
       {/* --- القسم الأول: Menu_right --- */}
-          
+
       <Menu_right title={faqData[0]?.name}>
         <P>{faqData[0]?.acceptedAnswer?.text}</P>
-        <H2>تعرف على باقات اشتراك المتوفرة في <IptvForja /></H2>
-       <P>سواء كنت تريد اشتراك <IptvForja_P /> لمدة سنة أو اشتراك لمدة ستة أشهر أو ثلاث أشهر أو شهر في نفس الوقت، ستجد جميع الخيارات جاهزة للاستخدام الفوري</P>
-        <H2Gray><IptvForja /> المتجر الرسمي الذي يضمن لك:</H2Gray>
-        <PGray>مشاهده من أي دولة … المغرب السعودية، أوروبا، الخليج، العالم... تفعيل فوري خلال ثوانٍ بدون التزام – وبدون بيانات مصرفية للتجربة المجانية</PGray>
+        <H2>
+          تعرف على باقات اشتراك المتوفرة في <IptvForja />
+        </H2>
+        <P>
+          سواء كنت تريد اشتراك <IptvForja_P /> لمدة سنة أو اشتراك لمدة ستة أشهر
+          أو ثلاث أشهر أو شهر في نفس الوقت، ستجد جميع الخيارات جاهزة للاستخدام
+          الفوري
+        </P>
+        <H2Gray>
+          <IptvForja /> المتجر الرسمي الذي يضمن لك:
+        </H2Gray>
+        <PGray>
+          مشاهده من أي دولة … المغرب السعودية، أوروبا، الخليج، العالم... تفعيل
+          فوري خلال ثوانٍ بدون التزام – وبدون بيانات مصرفية للتجربة المجانية
+        </PGray>
         <ButtonRed
           href="/Subscriptions"
           LinkText="اختر باقتك المناسبة"
@@ -105,60 +115,68 @@ export default function Home() {
       <Menu_left
         title={faqData[1]?.name}
         description={faqData[1]?.acceptedAnswer?.text}
-       li_1="تغطية كاملة للدوريات الكبرى بجودات  HD وFull HD وUltra HD و2K و4K و8K ... مستقرة"
-       li_2="ترتيب دقيق حسب الدولة (المغرب، الخليج، مصر) مع باقات ترفيهية"
-       li_3="قنوات أوروبية وأمريكية مترجمة، بالإضافة إلى الوثائقيات العالمية."
-       li_4="مكتبة أفلام (VOD) متجددة يومياً وقنوات آمنة مخصصة للأطفال."
-       li_5="أكثر من 46,000 قناة حية ومكتبة أفلام ضخمة بين يديك."
-       li_6="جودات متعددة تضمن استقرار البث على أي سرعة إنترنت."
-       li_7="قنوات بديلة تضمن استمرار المشاهدة أثناء المباريات الكبرى."
-       li_8="احصل على IPTVFORJA وابدأ المشاهدة خلال ثوانٍ معدودة."
-       li_9="إضافة تلقائية لأحدث القنوات والترددات دون تدخل منك."
-        buttonUrl={ <ButtonRed href="/Subscriptions" LinkText="اشترك الآن وابدأ المشاهدة"/> }
-      > 
-        
+        li_1="تغطية كاملة للدوريات الكبرى بجودات  HD وFull HD وUltra HD و2K و4K و8K ... مستقرة"
+        li_2="ترتيب دقيق حسب الدولة (المغرب، الخليج، مصر) مع باقات ترفيهية"
+        li_3="قنوات أوروبية وأمريكية مترجمة، بالإضافة إلى الوثائقيات العالمية."
+        li_4="مكتبة أفلام (VOD) متجددة يومياً وقنوات آمنة مخصصة للأطفال."
+        li_5="أكثر من 46,000 قناة حية ومكتبة أفلام ضخمة بين يديك."
+        li_6="جودات متعددة تضمن استقرار البث على أي سرعة إنترنت."
+        li_7="قنوات بديلة تضمن استمرار المشاهدة أثناء المباريات الكبرى."
+        li_8="احصل على IPTVFORJA وابدأ المشاهدة خلال ثوانٍ معدودة."
+        li_9="إضافة تلقائية لأحدث القنوات والترددات دون تدخل منك."
+        buttonUrl={
+          <ButtonRed
+            href="/Subscriptions"
+            LinkText="اشترك الآن وابدأ المشاهدة"
+          />
+        }
+      >
         <Section
-          icoun={"fa-regular fa-message"}
           title={faqData[2]?.name}
           description={faqData[2]?.acceptedAnswer?.text}
-        >
-          <ChatIcon />
-        </Section>
-
-        <Section
-          icoun={"fa-solid fa-tv"}
-          title={faqData[3]?.name}
-        description={faqData[3]?.acceptedAnswer?.text}
         >
           <TvIcon />
         </Section>
 
         <Section
-          icoun={"fa-solid fa-envelope"}
-          title={faqData[4]?.name}
-        description={faqData[4]?.acceptedAnswer?.text}
+          title={faqData[3]?.name}
+          description={faqData[3]?.acceptedAnswer?.text}
         >
-          <MessageIcon />
+          <Signal />
         </Section>
 
         <Section
-          icoun={"fa-solid fa-tag"}
-           title={faqData[5]?.name}
-        description={faqData[5]?.acceptedAnswer?.text}
+          title={faqData[4]?.name}
+          description={faqData[4]?.acceptedAnswer?.text}
         >
-          <TagIcon />
+          <Banknotes />
+        </Section>
+
+        <Section
+          title={faqData[5]?.name}
+          description={faqData[5]?.acceptedAnswer?.text}
+        >
+          <SupportIcon />
         </Section>
       </Menu_left>
       {/* --- القسم الثالث: Menu_right (VOD) --- */}
-      <Menu_right
-        title={"مكتبة أفلام ومسلسلات VOD – أكثر من 153859 فيلم و39949 مسلسل"}
-      >
-        <P>✓ افلام جوده عاليه</P>
-        <P>✓ مسلسلات عربية وعالمية</P>
-        <P>✓ محتوى أمريكي – تركي – هندي – كوري – أنيميشن......</P>
-        <P>✓ تحديث يومي للحلقات الجديدة</P>
-        <P>✓ تنظيم داخل باقات تسهّل الوصول لأي محتوى</P>
-        <P>كل هذا ضمن أفضل اشتراك IPTV بجودة عالية وبدون تحميل أو انتظار.</P>
+      <Menu_right title={faqData[6]?.name}>
+        <P>{faqData[6]?.acceptedAnswer?.text}</P>
+        <ul className=" flex flex-col h-72 justify-between">
+          <li>✓ أفلام بجودة عالية Full HD  8K لتجربة مشاهدة سينمائية.</li>
+          <li>✓ مسلسلات عربية وعالمية حصرية تلبي جميع الأذواق.</li>
+          <li>✓ محتوى ضخم (أمريكي – تركي – هندي – كوري – أنيميشن) وأكثر.</li>
+          <li>✓ تحديث يومي تلقائي لإضافة أحدث الحلقات والأفلام فور صدورها.</li>
+          <li>✓ تنظيم احترافي داخل باقات ذكية تسهّل عليك الوصول لأي محتوى.</li>
+          <li>✓ مكتبة VOD شاملة تضم آلاف العناوين المتجددة على مدار الساعة.</li>
+          <li>
+            ✓ سيرفرات قوية تضمن لك بثاً مستقراً وبدون أي تقطيع أثناء المشاهدة.
+          </li>
+          <li>
+            ✓ كل هذا ضمن أفضل اشتراك IPTV بجودة عالية وبدون تحميل أو انتظار.
+          </li>
+          <li>✓ دعم فني متواصل لضمان حصولك على أفضل تجربة ترفيهية متكاملة.</li>
+        </ul>
         <ButtonRed
           href="/Subscriptions"
           LinkText="احصل على الوصول الكامل للمكتبة"
@@ -166,19 +184,17 @@ export default function Home() {
       </Menu_right>
       {/* --- القسم الرابع: Menu_left (Free Trial) --- */}
       <Menu_left
-        title={
-          "اشتراك IPTV مجاني لمدة 12 ساعة – بدون تقطيع – وبدون بيانات مصرفية"
-        }
-        description=""
+        title={faqData[7]?.name}
+          description={faqData[7]?.acceptedAnswer?.text}
         li_1=""
-       li_2=""
-       li_3=""
-       li_4=""
-       li_5=""
-       li_6=""
-        li_7=""
-       li_8=""
-       li_9=""
+        li_2="✓ استمتع ببث مباشر فائق السرعة وبدون تقطيع حتى في أوقات الذروة والمباريات."
+        li_3="✓ تجربة مستخدم سلسة مع واجهة بسيطة تمكنك من التنقل بين الأقسام بسهولة."
+        li_4="✓ تقنيات بث حديثة تضمن لك استهلاكاً أقل للإنترنت مع الحفاظ على دقة الصورة"
+        li_5="✓ توافق تام مع جميع أجهزتك: (شاشات سمارت، هواتف، تي في بوكس، وحواسيب)."
+        li_6="✓ تحديثات تقنية دورية للسيرفرات لضمان بقاء الخدمة بأفضل أداء ممكن"
+        li_7="✓ نظام حماية وتشفير متطور يضمن لك خصوصية تامة وأماناً أثناء المشاهدة."
+        li_8="✓ تفعيل فوري للاشتراك بمجرد الطلب، مع وصول كامل لكافة المميزات والخصائص."
+        li_9="✓ دعم فني احترافي متوفر دائماً للإجابة على استفساراتك وحل أي مشكلة تقنية."
         buttonUrl={
           <ButtonRed
             href="/freetrial"
@@ -188,24 +204,20 @@ export default function Home() {
       >
         {/* البطاقة الأولى */}
         <ArticleCard
-          title={"اختبر الجودة قبل الشراء"}
-          paragraph={
-            "استمتع بجودة بث فائقة وثبات مطلق على جميع الأجهزة. ابدأ الآن بتجربة IPTV مجانية شاملة لكل المميزات، وتأكد من استقرار الخدمة في أوقات الذروة قبل الالتزام بالاشتراك الكامل."
-          }
-          ButtonUrl={<ButtonRed href="/freetrial" LinkText="تجربه مجانيه" />}
+          title={faqData[8]?.name}
+          description={faqData[8]?.acceptedAnswer?.text}
+          ButtonUrl={<ButtonRed href="/freetrial" LinkText="تجربه  IPTVFORJA مجانيه" />}
         >
-          <TvIcon />
+          <Rocket />
         </ArticleCard>
 
         {/* البطاقة الثانية */}
         <ArticleCard
-          title={"سرعة بث وثبات لا يقارن"}
-          paragraph={
-            "نوفر لك أقوى السيرفرات العالمية لاكتشاف سرعة التنقل بين القنوات وتنوع المحتوى الضخم. جرّب الخدمة الآن وتعرف على الفرق في الجودة والأداء بنفسك لتشترك معنا بكل ثقة."
-          }
-          ButtonUrl={<ButtonRed href="/freetrial" LinkText="جرب مجانا" />}
+           title={faqData[9]?.name}
+          description={faqData[9]?.acceptedAnswer?.text}
+          ButtonUrl={<ButtonRed href="/freetrial" LinkText="جرب IPTVFORJA مجانا" />}
         >
-          <FilmoIcon />
+          <Bolt/>
         </ArticleCard>
       </Menu_left>
       <StatsSection />
