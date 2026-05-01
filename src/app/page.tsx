@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { HomeMeta } from "./data_seo/Home_seo";
 import { HomeSchema } from "./data_seo/Home_seo";
 import IptvForja_P from "./components/HtmlTools/IptvForja_P";
+
 import Accordion from "./components/Accordion";
 
 import Menu_left from "./components/MenuLeft/MenuLeft";
@@ -15,25 +16,25 @@ import Menu_right from "./components/Menu_right";
 import StatsSection from "./components/StatsSection";
 import ArticleCard from "./components/ArticleCard";
 
-import H1 from "./components/HtmlTools/H1";
+
 import H2 from "./components/HtmlTools/H2";
 import P from "./components/HtmlTools/P";
 import DivScreen from "./components/HtmlTools/DivScreen";
-import FlexBox from "./components/HtmlTools/FlexBox";
+
 import IptvForja from "./components/HtmlTools/IptvForja";
 import ButtonRed from "./components/HtmlTools/ButtonRed";
-import { FilmoIcon } from "./components/heroicons/FilmoIcon";
+
 import { TvIcon } from "./components/heroicons/TvIcon"
 import Bolt from "./components/heroicons/Bolt";
-import Banknotes from "./components/heroicons/Banknotes";
 import Signal from "./components/heroicons/Signal";
 import SupportIcon from "./components/heroicons/SupportIcon";
 
-import { TagIcon } from "./components/heroicons/TagIcon";
+
 import My_List from "./components/ChannelList/My_List";
 import H2Gray from "./components/HtmlTools/H2Gray";
 import PGray from "./components/HtmlTools/PGray";
-import Rocket from "./components/heroicons/Rocket";
+import Rocket from "./components/heroicons/RocketNext";
+import { title } from "process";
 {
   /** */
 }
@@ -67,7 +68,11 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HomeSchema) }}
       />
+      <DivScreen title={HomeMeta.title} description={HomeMeta.description}/>
+      {/**
+       * 
       <DivScreen>
+       
         <H1>{HomeMeta.title}</H1>
 
         <P>{HomeMeta.description}</P>
@@ -83,8 +88,9 @@ export default function Home() {
         <FlexBox className="">
           <ButtonRed href="/freetrial" LinkText="جرّب قبل أن تشتركa" />
           <ButtonRed href="/Subscriptions" LinkText=" ابدا المشاهده الان" />
-        </FlexBox>
-      </DivScreen>
+        </FlexBox> 
+        c
+      </DivScreen>*/}
       <My_List />
       {/**<My_List /> */}
       {/* --- القسم الأول: Menu_right --- */}
@@ -149,7 +155,7 @@ export default function Home() {
           title={faqData[4]?.name}
           description={faqData[4]?.acceptedAnswer?.text}
         >
-          <Banknotes />
+          
         </Section>
 
         <Section

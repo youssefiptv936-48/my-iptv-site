@@ -61,7 +61,7 @@ export default function Navbar() {
       {/***** قسم الهاتف (Responsive) End *****/}
 
       {/***** قسم شاشات الحاسوب (Desktop - Large screens) *****/}
-      <nav className="hidden lg:flex justify-around items-center h-20">
+      <nav className="hidden lg:flex justify-around items-center bg-transparent h-20">
         <div className="w-40 text-2xl text-red-500 font-bold"> IPTVFORJA</div>
 
         <div className="w-2xl text-amber-50 flex justify-between gap-3">

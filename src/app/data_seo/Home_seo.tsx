@@ -3,8 +3,8 @@
 import { text } from "stream/consumers";
 
 export const HomeMeta = {
-  title: "أفضل اشتراك IPTV في المغرب 2026 – سيرفرات بدون تقطيع ودعم فني مباشر", // <--- هنا اكتب عنوان الموقع
-  description:"IPTVFORJA هو الخيار الافضل لعام 2026 يوفر لك اشتراكاً رسمياً يضم أكثر من 46,000 قناة بجودة HD وFull HD وUltra HD و2K و4K و8K ... مع مكتبة أفلام ومسلسلات ضخمة تحديث يومياً، لضمان تجربة مشاهدة مستقرة.", // <--- هنا اكتب الوصف
+  title: "IPTVFORJA", // <--- هنا اكتب عنوان الموقع
+  description:"استمتع بأكثر من 46,000 قناة عالمية وباقات رياضية وترفيهية بجودة HD / FHD / 4K / 8K، مع مكتبة أفلام ومسلسلات محدثة يوميًا، بث مباشر مستقر، ودعم فني 24/7.",
  keywords: "iptvforja, forja iptv, forja tv, أفضل اشتراك IPTV في المغرب 2026, اشتراك iptv رسمي, أفضل سيرفر اي بي تي في, Abonnement IPTV Maroc, IPTV Smart Player, سيرفر بدون تقطيع, كيف احصل على اشتراك IPTV",
   url: "https://iptvforja.com", // <--- هنا اكتب رابط موقعك الكامل
   image: "https://your-site.com/share-image.jpg", // <--- هنا ضع رابط صورة لمشاركتها في واتساب
