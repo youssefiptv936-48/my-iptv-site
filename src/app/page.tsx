@@ -1,6 +1,6 @@
 // ضروري لاستخدام useAccordion
 // Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force
-
+import Grid from "./components/HtmlTools/Grid";
 // حل مشكلة المسار: تأكد أن الملف موجود في مجلد app باسم globals.css أو قم بتسميته Style.css في نفس المجلد
 import { Metadata } from "next";
 import { HomeMeta } from "./data_seo/Home_seo";
@@ -94,7 +94,9 @@ export default function Home() {
       <My_List />
       {/**<My_List /> */}
       {/* --- القسم الأول: Menu_right --- */}
-
+      <Grid >
+          <h1></h1>
+      </Grid>
       <Menu_right title={faqData[0]?.name}>
         <P>{faqData[0]?.acceptedAnswer?.text}</P>
         <H2>

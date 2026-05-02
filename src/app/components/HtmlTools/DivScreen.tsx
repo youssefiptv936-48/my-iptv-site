@@ -14,19 +14,24 @@ interface Props {
 }
 export default function DivScreen({ title, description }: Props) {
   return (
-    <div className="   relative flex items-center justify-center text-[#ffffff] h-screen w-full bg-black">
+    <div className="   relative flex items-center justify-center text-slate-200 h-screen w-full bg-black">
       {/* 1. طبقة الصورة (الخلفية) - تبقى في الخلف z-0 */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/IptvForja.webp"
-          alt="اشتراك IPTV في المغرب 2026"
+          alt="أفضل اشتراك IPTV في المغرب - جودة ممتازة 2026"
           fill
           priority
-          className="object-center opacity-40 "
+          // هذه هي الإعدادات القصوى للأداء بناءً على طلبك
+          sizes="(max-width: 640px) 100vw,    /* للهواتف */
+           (max-width: 768px) 100vw,    /* للتابلت */
+           (max-width: 1024px) 100vw,   /* للابتوب */
+           1280px" /* الحد الأقصى لشاشات XL */
+          className="object-cover opacity-40 "
         />
       </div>
 
-      <div className=" w-full  relative  bg-amber-700 flex items-center flex-col md:w-1/2   ">
+      <div className=" w-full  relative   flex items-center flex-col md:w-1/2   ">
         <h1 className="text-red-600 text-6xl   font-black  text-center   scale-y-122 md:text-7xl ">
           {title}
         </h1>
@@ -62,13 +67,13 @@ export default function DivScreen({ title, description }: Props) {
             href="/"
             className={` md:px-7 py-2 m-1 text-center text-slate-200 min-w-44 inline-block rounded-r-3xl rounded-ee-3xl font-bold text-md bg-linear-to-l from-red-600 to-red-700 hover:scale-105 transition-transform duration-300`}
           >
-            جرب  IPTVFORJA مجانا
+            جرب IPTVFORJA مجانا
           </Link>
           <Link
             href="/"
             className={`md:px-7 py-2 m-1 text-center text-slate-200 min-w-44 inline-block font-bold text-md bg-linear-to-l from-red-600 to-red-700 hover:scale-105 transition-transform duration-300 rounded-l-3xl rounded-es-3xl`}
           >
-           ابدا المشاهده الان
+            ابدا المشاهده الان
           </Link>{" "}
         </div>
       </div>
